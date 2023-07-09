@@ -38,13 +38,13 @@ const Header = () => {
     <div>
       <div className='positionn'>
         <div className="top_layer">
-          <div className="phone">
+          <div>
              <span className='top_icon'><FiPhone color='white' size={15}/></span> <span>+22136622</span>
           </div>
-          <div className="center">
-               <span className='top_icon'><AiOutlineMail color='white' size={15}/></span>   <span>suppoert@elextra.io</span>
+          <div>
+               <span className='top_icon'><AiOutlineMail color='white' size={15}/></span>   <span>support@elextra.io</span>
           </div>
-          <div className="location">
+          <div>
               <span className='top_icon'><CiLocationOn color='white' size={15}/></span>    <span>locations</span>
           </div>
         </div>

@@ -31,7 +31,7 @@ const Home = () => {
         fontSize:'25px'
       }}
     >
-      Please Login to view the page
+      Please Login to view the page, For login Click on Profile Icon
     </div>
       )}
     </div>

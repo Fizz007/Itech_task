@@ -30,7 +30,7 @@ const Footer = () => {
 
         <div className="containerLink">
             <span>Legal and Polices</span>
-            <span>Meesho Tech Blogs</span>
+            <span>Tech Blogs</span>
             <span>Notice and Returns</span>
         </div>
 
