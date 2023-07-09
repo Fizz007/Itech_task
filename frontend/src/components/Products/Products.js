@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react';
 import { Button, Modal, Form } from 'react-bootstrap';
 import axios from 'axios';
 import '../Products/Products.css'
+import { baseURL } from '../config/BaseURL';
 
 const Products = () => {
   const [showModal, setShowModal] = useState(false);
@@ -26,7 +27,7 @@ const Products = () => {
     console.log(itemName, itemCount)
     try {
       
-      const response = await axios.post('http://localhost:5400/ecom/register', {
+      const response = await axios.post(`${baseURL}/ecom/register`, {
         name: itemName,
         count: itemCount
       });
@@ -43,7 +44,7 @@ const Products = () => {
 
   const fetchItems = async () => {
     try {
-      const response = await axios.get('http://localhost:5400/ecom/items');
+      const response = await axios.get(`${baseURL}/ecom/items`);
       setItems(response.data.user);
     } catch (error) {
       console.error(error);
@@ -52,7 +53,7 @@ const Products = () => {
 
   const fetchCartItems = async () => {
     try {
-      const response = await axios.get('http://localhost:5400/ecom/cart');
+      const response = await axios.get(`${baseURL}/ecom/cart`);
       setCartItems(response.data);
     } catch (error) {
       console.error(error);
@@ -62,7 +63,7 @@ const Products = () => {
   const handleCart = async(itemId)=> {
     console.log("add cart")
     try {
-      await axios.post('http://localhost:5400/ecom/cart', { itemId });
+      await axios.post(`${baseURL}/ecom/cart`, { itemId });
       fetchItems(); // Refresh the items list
       fetchCartItems(); // Refresh the cart items list
     } catch (error) {
